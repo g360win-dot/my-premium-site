@@ -1,0 +1,318 @@
+@import "tailwindcss";
+
+:root {
+  --gold: #C9A84C;
+  --gold-light: #E8CC7A;
+  --gold-dark: #8B6914;
+  --black-deep: #02040a;
+  --black-rich: #030508;
+  --black-card: #060810;
+  --text-primary: #F5EDD8;
+  --text-secondary: #B8A882;
+  --background: #02040a;
+  --foreground: #F5EDD8;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(180deg, #030610 0%, #02040c 30%, #020308 70%, #02030a 100%);
+  background-attachment: fixed;
+  color: var(--text-primary);
+  font-family: 'Hiragino Mincho ProN', 'Yu Mincho', 'Georgia', serif;
+  overflow-x: hidden;
+}
+
+/* ========== CHAMPAGNE BUBBLE PARTICLES ========== */
+.particles-container {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+/* 共通ベース */
+.bubble {
+  position: absolute;
+  bottom: -6px;
+  border-radius: 50%;
+  animation: riseUp linear infinite;
+}
+
+/* ゴールド気泡（奇数） */
+.bubble:nth-child(odd) {
+  background: radial-gradient(circle at 32% 28%, rgba(255, 252, 210, 0.95), rgba(212, 168, 76, 0.45) 45%, transparent);
+  box-shadow: 0 0 3px rgba(232, 204, 122, 0.7), 0 0 8px rgba(201, 168, 76, 0.25);
+}
+
+/* パール白気泡（偶数） */
+.bubble:nth-child(even) {
+  background: radial-gradient(circle at 32% 28%, rgba(255, 255, 255, 0.88), rgba(230, 222, 200, 0.2) 45%, transparent);
+  box-shadow: 0 0 3px rgba(255, 255, 255, 0.6), 0 0 7px rgba(255, 255, 255, 0.15);
+}
+
+/* グラス底から頂上へゆっくり上昇 — シャンパン気泡らしい滑らかな動き */
+@keyframes riseUp {
+  0%   { transform: translateY(0) translateX(0); opacity: 0; }
+  6%   { opacity: 0; }
+  12%  { opacity: 0.82; }
+  28%  { opacity: 0.55; }
+  40%  { opacity: 0.85; }
+  50%  { transform: translateY(-50vh) translateX(var(--drift)); opacity: 0.65; }
+  65%  { opacity: 0.4; }
+  78%  { opacity: 0.7; }
+  90%  { opacity: 0.12; }
+  100% { transform: translateY(-108vh) translateX(calc(var(--drift) * 1.2)); opacity: 0; }
+}
+
+/* 各気泡の個別設定 — 1〜4px の小さなサイズでリアルなシャンパン感 */
+.bubble:nth-child(1)  { left: 4%;   width: 2px; height: 2px; animation-duration: 8s;  animation-delay: 0s;    --drift: 4px; }
+.bubble:nth-child(2)  { left: 11%;  width: 3px; height: 3px; animation-duration: 12s; animation-delay: 1.4s;  --drift: -3px; }
+.bubble:nth-child(3)  { left: 19%;  width: 2px; height: 2px; animation-duration: 7s;  animation-delay: 0.6s;  --drift: 5px; }
+.bubble:nth-child(4)  { left: 27%;  width: 3px; height: 3px; animation-duration: 10s; animation-delay: 2.2s;  --drift: -4px; }
+.bubble:nth-child(5)  { left: 34%;  width: 1px; height: 1px; animation-duration: 9s;  animation-delay: 0.9s;  --drift: 3px; }
+.bubble:nth-child(6)  { left: 41%;  width: 4px; height: 4px; animation-duration: 14s; animation-delay: 3.1s;  --drift: -5px; }
+.bubble:nth-child(7)  { left: 49%;  width: 2px; height: 2px; animation-duration: 7s;  animation-delay: 1.7s;  --drift: 4px; }
+.bubble:nth-child(8)  { left: 57%;  width: 3px; height: 3px; animation-duration: 10s; animation-delay: 0.4s;  --drift: -4px; }
+.bubble:nth-child(9)  { left: 64%;  width: 2px; height: 2px; animation-duration: 8s;  animation-delay: 2.8s;  --drift: 3px; }
+.bubble:nth-child(10) { left: 71%;  width: 4px; height: 4px; animation-duration: 13s; animation-delay: 1.0s;  --drift: -3px; }
+.bubble:nth-child(11) { left: 79%;  width: 2px; height: 2px; animation-duration: 7s;  animation-delay: 1.9s;  --drift: 5px; }
+.bubble:nth-child(12) { left: 87%;  width: 3px; height: 3px; animation-duration: 11s; animation-delay: 3.6s;  --drift: -4px; }
+.bubble:nth-child(13) { left: 94%;  width: 1px; height: 1px; animation-duration: 8s;  animation-delay: 0.7s;  --drift: 3px; }
+.bubble:nth-child(14) { left: 7%;   width: 3px; height: 3px; animation-duration: 15s; animation-delay: 4.2s;  --drift: -3px; }
+.bubble:nth-child(15) { left: 16%;  width: 2px; height: 2px; animation-duration: 6s;  animation-delay: 2.4s;  --drift: 4px; }
+.bubble:nth-child(16) { left: 24%;  width: 4px; height: 4px; animation-duration: 10s; animation-delay: 1.2s;  --drift: -5px; }
+.bubble:nth-child(17) { left: 44%;  width: 2px; height: 2px; animation-duration: 8s;  animation-delay: 3.9s;  --drift: 3px; }
+.bubble:nth-child(18) { left: 54%;  width: 3px; height: 3px; animation-duration: 13s; animation-delay: 0.5s;  --drift: -4px; }
+.bubble:nth-child(19) { left: 74%;  width: 1px; height: 1px; animation-duration: 7s;  animation-delay: 3.0s;  --drift: 4px; }
+.bubble:nth-child(20) { left: 84%;  width: 3px; height: 3px; animation-duration: 11s; animation-delay: 1.7s;  --drift: -3px; }
+.bubble:nth-child(21) { left: 3%;   width: 2px; height: 2px; animation-duration: 9s;  animation-delay: 5.1s;  --drift: 4px; }
+.bubble:nth-child(22) { left: 14%;  width: 3px; height: 3px; animation-duration: 12s; animation-delay: 0.3s;  --drift: -3px; }
+.bubble:nth-child(23) { left: 22%;  width: 1px; height: 1px; animation-duration: 8s;  animation-delay: 4.5s;  --drift: 3px; }
+.bubble:nth-child(24) { left: 31%;  width: 4px; height: 4px; animation-duration: 14s; animation-delay: 2.0s;  --drift: -5px; }
+.bubble:nth-child(25) { left: 39%;  width: 2px; height: 2px; animation-duration: 7s;  animation-delay: 1.3s;  --drift: 4px; }
+.bubble:nth-child(26) { left: 61%;  width: 3px; height: 3px; animation-duration: 10s; animation-delay: 3.4s;  --drift: -3px; }
+.bubble:nth-child(27) { left: 69%;  width: 2px; height: 2px; animation-duration: 9s;  animation-delay: 0.8s;  --drift: 5px; }
+.bubble:nth-child(28) { left: 78%;  width: 1px; height: 1px; animation-duration: 7s;  animation-delay: 4.8s;  --drift: -4px; }
+.bubble:nth-child(29) { left: 91%;  width: 3px; height: 3px; animation-duration: 11s; animation-delay: 2.6s;  --drift: 3px; }
+.bubble:nth-child(30) { left: 47%;  width: 2px; height: 2px; animation-duration: 8s;  animation-delay: 5.5s;  --drift: -3px; }
+
+/* ========== GOLD GRADIENT UTILITIES ========== */
+.gold-text {
+  background: linear-gradient(135deg, #C9A84C 0%, #E8CC7A 40%, #C9A84C 70%, #8B6914 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gold-border {
+  border: 1px solid rgba(201, 168, 76, 0.4);
+}
+
+.gold-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #C9A84C, transparent);
+}
+
+/* ========== SECTION STYLES ========== */
+.section-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* ========== HERO ========== */
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+/* ========== IMAGE PLACEHOLDER ========== */
+/* グリッド・枠線を完全除去。背景は漆黒のみ */
+.img-placeholder {
+  position: relative;
+  background: #050505;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+/* ::before / ::after を無効化 */
+.img-placeholder::before,
+.img-placeholder::after {
+  display: none;
+}
+
+.img-placeholder-icon {
+  position: relative;
+  z-index: 1;
+  opacity: 0.35;
+}
+
+.img-placeholder-label {
+  position: relative;
+  z-index: 1;
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  color: rgba(201, 168, 76, 0.4);
+  text-transform: uppercase;
+  font-family: Arial, sans-serif;
+}
+
+/* ========== CARD ========== */
+/* 枠線なし。上部ゴールドラインと背景のみで高級感を表現 */
+.premium-card {
+  background: linear-gradient(160deg, rgba(12, 10, 3, 0.98) 0%, rgba(7, 6, 2, 0.98) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.premium-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 15%;
+  right: 15%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(201, 168, 76, 0.4), transparent);
+}
+
+/* ========== FEATURE ICON ========== */
+.feature-icon-wrap {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(201, 168, 76, 0.1) 0%, transparent 70%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* ========== BUTTON ========== */
+.btn-gold {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.875rem 2.5rem;
+  background: linear-gradient(135deg, #C9A84C 0%, #E8CC7A 50%, #C9A84C 100%);
+  color: #050505;
+  font-weight: 600;
+  font-family: Arial, sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.btn-gold:hover {
+  background: linear-gradient(135deg, #E8CC7A 0%, #C9A84C 50%, #E8CC7A 100%);
+  box-shadow: 0 4px 24px rgba(201, 168, 76, 0.35);
+  transform: translateY(-1px);
+}
+
+.btn-outline-gold {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.875rem 2.5rem;
+  background: transparent;
+  color: #C9A84C;
+  font-family: Arial, sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  border: 1px solid rgba(201, 168, 76, 0.45);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.btn-outline-gold:hover {
+  border-color: #C9A84C;
+  background: rgba(201, 168, 76, 0.05);
+  box-shadow: 0 0 20px rgba(201, 168, 76, 0.12);
+}
+
+/* ========== SCROLL REVEAL ANIMATION ========== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.delay-1 { animation-delay: 0.1s; opacity: 0; }
+.delay-2 { animation-delay: 0.25s; opacity: 0; }
+.delay-3 { animation-delay: 0.4s; opacity: 0; }
+.delay-4 { animation-delay: 0.55s; opacity: 0; }
+
+/* ========== SHIMMER ON GOLD TEXT ========== */
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+.gold-shimmer {
+  background: linear-gradient(90deg, #C9A84C 0%, #E8CC7A 30%, #fff8e7 50%, #E8CC7A 70%, #C9A84C 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 4s linear infinite;
+}
+
+/* ========== ORNAMENT LINE ========== */
+.ornament {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.ornament::before,
+.ornament::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(201, 168, 76, 0.45));
+}
+
+.ornament::after {
+  background: linear-gradient(90deg, rgba(201, 168, 76, 0.45), transparent);
+}
