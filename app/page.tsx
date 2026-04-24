@@ -51,10 +51,9 @@ export default function Home() {
             fontSize: "1.05rem",
             fontWeight: 700,
             letterSpacing: "0.3em",
-            color: "#D4A84C",
           }}
         >
-          UP SCENT
+          <span className="gold-shimmer" style={{ fontWeight: 600, fontSize: "1.05em" }}>UP SCENT</span>
         </div>
 
         {/* Right: phone + CTA */}
@@ -139,20 +138,16 @@ export default function Home() {
           style={{
             fontFamily: "var(--font-noto-serif-jp), 'Hiragino Mincho ProN', 'Yu Mincho', serif",
             fontSize: "clamp(2.6rem, 8vw, 6rem)",
-            fontWeight: 600,
             lineHeight: 1.15,
             letterSpacing: "0.08em",
             marginBottom: "2rem",
-            color: "#D4A84C",
-            background: "linear-gradient(160deg, #9a7520 0%, #D4A84C 20%, #F0D878 48%, #D4A84C 76%, #9a7520 100%)",
-            WebkitBackgroundClip: "text",
-            WebkitTextFillColor: "transparent",
-            backgroundClip: "text",
             display: "block",
             filter: "drop-shadow(0 0 28px rgba(240,216,120,0.45)) drop-shadow(0 0 64px rgba(201,168,76,0.22))",
           }}
         >
-          香りアップせんと？
+          <span className="gold-shimmer" style={{ fontWeight: 600, fontSize: "1.05em" }}>
+            香りアップせんと？
+          </span>
         </h1>
 
         {/* ── サブキャッチ ── */}
@@ -204,7 +199,9 @@ export default function Home() {
           style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "0.75rem", marginBottom: "2.5rem" }}
         >
           <div style={{ height: "1px", width: "clamp(30px, 6vw, 80px)", background: "linear-gradient(90deg, transparent, rgba(201,168,76,0.4))" }} />
-          <span style={{ fontFamily: "Georgia, serif", fontSize: "0.55rem", color: "rgba(201,168,76,0.5)", letterSpacing: "0.4em", textTransform: "uppercase" }}>UP SCENT</span>
+          <span style={{ fontFamily: "Georgia, serif", fontSize: "0.55rem", letterSpacing: "0.4em", textTransform: "uppercase" }}>
+            <span className="gold-shimmer" style={{ fontWeight: 600, fontSize: "1.05em" }}>UP SCENT</span>
+          </span>
           <div style={{ height: "1px", width: "clamp(30px, 6vw, 80px)", background: "linear-gradient(90deg, rgba(201,168,76,0.4), transparent)" }} />
         </div>
 
@@ -301,7 +298,7 @@ export default function Home() {
               選ばれる理由
             </h2>
             <p style={{ fontFamily: "Arial, sans-serif", fontSize: "clamp(0.8rem, 1.8vw, 1rem)", color: "rgba(201,168,76,0.7)", letterSpacing: "0.08em", marginBottom: "0" }}>
-              空間の純度を極限まで高め、ブランド価値を香りでする戦UPする略的インフラ。
+              空間の純度を極限まで高め、香りでブランド価値を戦略的に引き上げる、上質な香りマーケティング。
             </p>
             <div className="gold-divider" style={{ width: "80px", margin: "1.75rem auto 0" }} />
           </div>
@@ -425,7 +422,8 @@ export default function Home() {
             <div className="gold-divider" style={{ width: "60px", margin: "1.5rem auto 1.25rem" }} />
 
             <p style={{ fontFamily: "Arial, sans-serif", fontSize: "0.72rem", color: "rgba(201,168,76,0.5)", letterSpacing: "0.15em", textTransform: "uppercase" }}>
-              UP SCENT — Redefine Your Space
+              <span className="gold-shimmer" style={{ fontWeight: 600, fontSize: "1.05em" }}>UP SCENT</span>
+              {" — Redefine Your Space"}
             </p>
           </div>
         </div>
@@ -442,12 +440,10 @@ export default function Home() {
             fontWeight: 300,
             letterSpacing: "0.14em",
             lineHeight: 1.6,
-            background: "linear-gradient(135deg, #b08d38 0%, #E8CC7A 45%, #C9A84C 75%, #9a7228 100%)",
-            WebkitBackgroundClip: "text",
-            WebkitTextFillColor: "transparent",
-            backgroundClip: "text",
           }}>
-            いらっしゃいませ より早い おもてなし
+            <span className="gold-shimmer" style={{ fontWeight: 600, fontSize: "1.05em" }}>
+              いらっしゃいませ より早い おもてなし
+            </span>
           </h2>
           <div className="gold-divider" style={{ width: "60px", margin: "1.5rem auto 0" }} />
         </div>
@@ -474,13 +470,11 @@ export default function Home() {
               fontWeight: 200,
               letterSpacing: "0.18em",
               lineHeight: 1.6,
-              background: "linear-gradient(135deg, #C9A84C 0%, #F0D98A 45%, #C9A84C 100%)",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-              backgroundClip: "text",
               marginBottom: "1.25rem",
             }}>
-              特別な瞬間を彩る、高揚感の演出。
+              <span className="gold-shimmer" style={{ fontWeight: 600, fontSize: "1.05em" }}>
+                特別な瞬間を彩る、高揚感の演出。
+              </span>
             </p>
             <p style={{
               fontFamily: "var(--font-noto-serif-jp), serif",
@@ -594,13 +588,7 @@ export default function Home() {
               marginBottom: "3rem",
             }}
           >
-            入店する<span style={{
-              background: "linear-gradient(135deg, #C9A84C 0%, #F0D98A 50%, #C9A84C 100%)",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-              backgroundClip: "text",
-              fontWeight: 600,
-            }}>二人に一人</span>が、思わず口にする。
+            新規ご来店の2人に1人が思わず口にする。
           </h2>
 
           <div className="gold-divider" style={{ width: "48px", margin: "0 auto 3.5rem" }} />
@@ -613,14 +601,12 @@ export default function Home() {
               fontWeight: 200,
               letterSpacing: "0.16em",
               lineHeight: 1.9,
-              background: "linear-gradient(135deg, #C9A84C 0%, #F0D98A 45%, #C9A84C 100%)",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-              backgroundClip: "text",
               marginBottom: "3rem",
             }}
           >
-            「このお店、いい香りがする――」
+            <span className="gold-shimmer" style={{ fontWeight: 600, fontSize: "1.05em" }}>
+              「このお店、いい香りがする――」
+            </span>
           </p>
 
           {/* ── 0秒のおもてなし ── */}
@@ -664,7 +650,7 @@ export default function Home() {
                 color: "rgba(245,237,216,0.75)",
               }}
             >
-              第一印象は、その後の顧客イメージの<span style={{
+              <span className="gold-shimmer" style={{ fontWeight: 600, fontSize: "1.05em" }}>第一印象</span>は、その後の顧客イメージの<span style={{
                 background: "linear-gradient(135deg, #C9A84C 0%, #F0D98A 50%, #C9A84C 100%)",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
@@ -927,14 +913,10 @@ export default function Home() {
             fontSize: "1.3rem",
             fontWeight: 700,
             letterSpacing: "0.3em",
-            background: "linear-gradient(135deg, #C9A84C 0%, #E8CC7A 50%, #C9A84C 100%)",
-            WebkitBackgroundClip: "text",
-            WebkitTextFillColor: "transparent",
-            backgroundClip: "text",
             marginBottom: "1.5rem",
           }}
         >
-          UP SCENT
+          <span className="gold-shimmer" style={{ fontWeight: 600, fontSize: "1.05em" }}>UP SCENT</span>
         </div>
 
         <div className="gold-divider" style={{ width: "60px", margin: "0 auto 1.5rem" }} />
@@ -983,7 +965,9 @@ export default function Home() {
             textTransform: "uppercase",
           }}
         >
-          © 2026 UP SCENT. All Rights Reserved.
+          © 2026{" "}
+          <span className="gold-shimmer" style={{ fontWeight: 600, fontSize: "1.05em" }}>UP SCENT</span>
+          . All Rights Reserved.
         </p>
       </footer>
     </>
