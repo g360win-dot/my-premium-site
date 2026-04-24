@@ -832,10 +832,7 @@ export default function Home() {
             >
               {/* LINE logo */}
               <div style={{ width: "48px", height: "48px", background: "rgba(255,255,255,0.18)", borderRadius: "12px", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-                <svg width="32" height="32" viewBox="0 0 48 48" fill="none">
-                  <path d="M24 7C14.6 7 7 13.4 7 21.2c0 5.2 3.4 9.8 8.5 12.4-.3 1.2-1.2 4.4-1.4 5.1 0 0-.1.3.2.5.2.1.5 0 .5 0 .7-.1 8-5.3 9.2-6.1.8.1 1.6.1 2.4.1 9.4 0 17-6.4 17-14.2C41 13.4 33.4 7 24 7z" fill="white" />
-                  <path d="M33.4 24.6h-4.2c-.2 0-.4-.2-.4-.4v-6.6c0-.2.2-.4.4-.4h4.2c.2 0 .4.2.4.4v1.1c0 .2-.2.4-.4.4h-2.7v1h2.7c.2 0 .4.2.4.4v1.1c0 .2-.2.4-.4.4h-2.7v1h2.7c.2 0 .4.2.4.4v1.1c0 .3-.2.6-.4.6zm-6.4 0h-1.1c-.2 0-.4-.2-.4-.4v-6.6c0-.2.2-.4.4-.4H27c.2 0 .4.2.4.4v6.6c0 .2-.2.4-.4.4zm-2.6 0h-4.2c-.2 0-.4-.2-.4-.4v-6.6c0-.2.2-.4.4-.4h1.1c.2 0 .4.2.4.4v5.1h2.7c.2 0 .4.2.4.4v1.1c0 .2-.2.4-.4.4zm-6.3 0h-1.1c-.2 0-.4-.2-.4-.4v-6.6c0-.2.2-.4.4-.4h1.1c.2 0 .4.2.4.4v6.6c0 .2-.2.4-.4.4z" fill="#06C755" />
-                </svg>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/LINE_logo.svg" width="32" height="32" alt="LINE" />
               </div>
 
               {/* Text block */}
