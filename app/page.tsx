@@ -632,7 +632,7 @@ export default function Home() {
                 marginBottom: "1.5rem",
               }}
             >
-              来店客の<span style={{
+              御来店の<span style={{
                 background: "linear-gradient(135deg, #C9A84C 0%, #F0D98A 50%, #C9A84C 100%)",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
