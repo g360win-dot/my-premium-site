@@ -590,7 +590,8 @@ export default function Home() {
               marginBottom: "3rem",
             }}
           >
-            新規ご来店の2人に1人が思わず口にする。
+            新規ご来店の2人に1人が
+            <span style={{ whiteSpace: "nowrap" }}>思わず口にする。</span>
           </h2>
 
           <div className="gold-divider" style={{ width: "48px", margin: "0 auto 3.5rem" }} />
