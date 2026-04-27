@@ -21,8 +21,18 @@ const notoSerifJP = Noto_Serif_JP({
 });
 
 export const metadata: Metadata = {
-  title: "UP SCENT | 売上を創る空間設計",
-  description: "中洲・天神の高級ラウンジ・ナイトレジャー向けプレミアム空間フレグランス。Luxury Space Design & Branding Marketing。福岡市博多区 UP SCENT",
+  metadataBase: new URL("https://www.upscent-nakasu-tenjin.com"),
+  title: "UP SCENT | 香りで空間の価値を変える",
+  description:
+    "博多・天神周辺エリア向け。店舗・ラウンジ・サロンの空間価値を香りで高めるフレグランスサービス。",
+  openGraph: {
+    title: "UP SCENT | 香りで空間の価値を変える",
+    description:
+      "博多・天神周辺エリア向け。店舗・ラウンジ・サロンの空間価値を香りで高めるフレグランスサービス。",
+    url: "https://www.upscent-nakasu-tenjin.com",
+    siteName: "UP SCENT",
+    type: "website",
+  },
 };
 
 export default function RootLayout({

@@ -1,14 +1,7 @@
-import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { LineCta } from "@/components/line-cta";
-
-export const metadata: Metadata = {
-  title: "空間香り | 香りのビジュアル体験",
-  description:
-    "海・自然・薔薇、パリのテラス、シャンパン。上質な写真の上に空間香りの価値を。博多・天神エリア限定の初期費用0円・1ヶ月無料デモ。",
-};
 
 /* Unsplash（無料ライセンス）— 高解像度 w=1920 & q=90 ／ 順：海→薔薇→森→シャンパン→パリ */
 const SLIDES: { id: string; src: string; main: ReactNode; sub: ReactNode; alt: string }[] = [
@@ -17,20 +10,16 @@ const SLIDES: { id: string; src: string; main: ReactNode; sub: ReactNode; alt: s
     src: "https://images.unsplash.com/photo-1505118380757-91f5f5632de0?w=1920&q=90&auto=format&fit=crop",
     main: (
       <>
-        扉を開けた瞬間——
+        扉を開けた瞬間、すべては始まる。
         <br />
-        お客様の表情が変わる
+        人の印象は、その一瞬で決まる。
       </>
     ),
     sub: (
       <>
-        新規御来店のお客様、2人に1人が
+        香りは、言葉よりも早く届き、
         <br />
-        「このお店、いい香りがする」と口にする。
-        <br />
-        いらっしゃいませより早いおもてなし。
-        <br />
-        第一印象が、その後の70%を決める。
+        空間の価値を静かに変えていく。
       </>
     ),
     alt: "穏やかな海の波",
@@ -40,18 +29,16 @@ const SLIDES: { id: string; src: string; main: ReactNode; sub: ReactNode; alt: s
     src: "https://images.unsplash.com/photo-1562690868-60bbe7293e94?w=1920&q=90&auto=format&fit=crop",
     main: (
       <>
-        他店に差をつける。
+        空間は、非日常へと変わる。
         <br />
-        競合に真似できない空間へ。
+        人は、感覚に導かれる。
       </>
     ),
     sub: (
       <>
-        香りのある空間は、香りがない空間より
+        気づけば、長く留まり、
         <br />
-        「質が高い」と感じさせる。
-        <br />
-        それだけで、あなたの店の価値が上がる。
+        やがて、また戻ってくる。
       </>
     ),
     alt: "プロ品質の赤薔薇の花束",
@@ -61,20 +48,16 @@ const SLIDES: { id: string; src: string; main: ReactNode; sub: ReactNode; alt: s
     src: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&q=90&auto=format&fit=crop",
     main: (
       <>
-        香りは、あなたの店の
+        差は、空間が生み出す。
         <br />
-        「見えないブランド」になる
+        人は無意識に、その質を感じ取る。
       </>
     ),
     sub: (
       <>
-        香りは脳にダイレクトに作用し、
+        その違いが、やがて価値となり、
         <br />
-        記憶と深く結びつく。
-        <br />
-        一度刻まれた印象は、
-        <br />
-        何度でも呼び覚まされる。
+        他にはない存在へと変わっていく。
       </>
     ),
     alt: "植物・森の自然光",
@@ -84,18 +67,16 @@ const SLIDES: { id: string; src: string; main: ReactNode; sub: ReactNode; alt: s
     src: "https://images.unsplash.com/photo-1623428454697-08da4a100602?w=1920&q=90&auto=format&fit=crop",
     main: (
       <>
-        スタッフが誇れる空間が、
+        誇れる空間が、人を引き寄せる。
         <br />
-        求人を変える
+        人は、無意識にその違いを感じ取る。
       </>
     ),
     sub: (
       <>
-        雰囲気・居心地・香り——
+        集まる人材の質が変わり、
         <br />
-        この三つが揃った店に、人は集まる。
-        <br />
-        求人成功率が変わる。
+        やがて、店の未来を変えていく。
       </>
     ),
     alt: "シャンパンを注ぐ高級感のあるシーン",
@@ -104,18 +85,20 @@ const SLIDES: { id: string; src: string; main: ReactNode; sub: ReactNode; alt: s
     id: "paris-cafe",
     src: "https://images.unsplash.com/photo-1635782166219-168a2fe1bd19?w=1920&q=90&auto=format&fit=crop",
     main: (
-      <>
-        滞在時間が伸び、
+      <span className="block leading-relaxed">
+        語らなくても、伝わるものがある。
         <br />
-        リピートが自然に増える
-      </>
+        それは、言葉を超えている。
+      </span>
     ),
     sub: (
-      <>
-        居心地の良さは、売上に直結する。
+      <span className="block leading-relaxed">
+        香りが、その感情に火を灯し、
         <br />
-        香りは、その最も簡単な答えのひとつ。
-      </>
+        静かに解き放っていく。
+        <br />
+        そして、その瞬間が、未来を変えていく。
+      </span>
     ),
     alt: "パリの高級レストラン・テラス席（夕景の街角）",
   },
@@ -211,22 +194,17 @@ export default function LpVisual() {
 
       <section className="w-full bg-[#07111f] px-4 py-24 flex justify-center">
         <div className="mx-auto w-full max-w-[800px] text-center">
-        <h2
-          className="mb-6 text-2xl text-white md:text-3xl"
-          style={{ fontFamily: "var(--font-noto-serif-jp), serif" }}
-        >
-          香りは、最後の差別化になる
-        </h2>
-
         <p
-          className="text-sm leading-relaxed text-gray-300"
+          className="mb-6 text-sm leading-relaxed text-gray-300"
           style={{ fontFamily: "var(--font-noto-serif-jp), serif" }}
         >
-          写真のような「印象」は、香りで裏付けられる。
+          空間の価値は、香りで完成する
           <br />
-          滞在、売上、採用、リピート——
+          視覚ではなく、記憶に残る印象へ。
           <br />
-          すべて、五感の土台の上に成り立つ。
+          滞在、リピート、売上、採用——
+          <br />
+          すべては、五感の設計から始まる。
         </p>
 
         <div className="flex w-full flex-col items-center">
@@ -238,7 +216,9 @@ export default function LpVisual() {
             今なら【<span className="gold-shimmer font-semibold">博多・天神周辺エリア</span>】限定
           </p>
           <p className="mt-2 text-white">初期費用０円 ＋ 1ヶ月無料デモ実施中</p>
-          <p className="mt-1 text-white">まず香りを体感してください</p>
+          <p className="mt-1 whitespace-nowrap text-center text-white">
+            まず香りを体感してください
+          </p>
         </div>
 
         <div
