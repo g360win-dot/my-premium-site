@@ -3,6 +3,27 @@ import Image from "next/image";
 import Link from "next/link";
 import { LineCta } from "@/components/line-cta";
 
+export const metadata = {
+  title: "語らなくても、伝わるものがある。",
+  description:
+    "それは、言葉を超えている。香りが、その感情に火を灯し、静かに解き放っていく。そして、その瞬間、未来を変えていく。",
+  openGraph: {
+    title: "語らなくても、伝わるものがある。",
+    description:
+      "それは、言葉を超えている。香りが、その感情に火を灯し、静かに解き放っていく。そして、その瞬間、未来を変えていく。",
+    url: "https://www.upscent-nakasu-tenjin.com/lp-d",
+    images: ["https://www.upscent-nakasu-tenjin.com/ogp-lp.jpg"],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "語らなくても、伝わるものがある。",
+    description:
+      "それは、言葉を超えている。香りが、その感情に火を灯し、静かに解き放っていく。そして、その瞬間、未来を変えていく。",
+    images: ["https://www.upscent-nakasu-tenjin.com/ogp-lp.jpg"],
+  },
+};
+
 /* Unsplash（無料ライセンス）— 高解像度 w=1920 & q=90 ／ 順：海→薔薇→森→シャンパン→パリ */
 const SLIDES: { id: string; src: string; main: ReactNode; sub: ReactNode; alt: string }[] = [
   {
