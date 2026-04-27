@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+
 const COMPANY = {
   name: "UP SCENT",
   tel: "090-5087-6576",
@@ -954,6 +956,15 @@ export default function Home() {
         </a>
 
         <div className="gold-divider" style={{ width: "40px", margin: "0 auto 1.5rem" }} />
+
+        <div className="mt-8 mb-6 text-center">
+          <Link
+            href="/lp-d"
+            className="inline-block text-sm font-semibold tracking-[0.18em] text-[#D4AF37] underline underline-offset-4 hover:opacity-80"
+          >
+            LPを見る
+          </Link>
+        </div>
 
         {/* Copyright */}
         <p

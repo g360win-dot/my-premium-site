@@ -121,18 +121,6 @@ const SLIDES: { id: string; src: string; main: ReactNode; sub: ReactNode; alt: s
   },
 ];
 
-const BULLETS = [
-  "業界最安値クラスの月額料金",
-  "香りで売上アップ・滞在時間延長",
-  "スタッフのモチベーションアップ",
-  "求人成功率アップ",
-  "他店との差別化・ブランディング",
-  "新規獲得・リピート率アップ",
-  "香りは脳に深く記憶される",
-  "1ヶ月無料デモ設置可能",
-  "初期費用サービス中",
-];
-
 function HeroSlide({
   item,
   priority,
@@ -196,7 +184,6 @@ function HeroSlide({
 export default function LpVisual() {
   return (
     <main className="min-h-screen w-full overflow-x-hidden bg-[#07111f] text-white">
-      <div className="w-full min-w-0">
       <header
         className="fixed left-0 right-0 top-0 z-50 w-full min-w-0 border-b border-[#C9A84C]/20 bg-[#07111f]/90 backdrop-blur-md"
         style={{ fontFamily: "Arial, sans-serif" }}
@@ -216,37 +203,24 @@ export default function LpVisual() {
         </div>
       </header>
 
-      <div className="w-full min-w-0 max-w-full pt-24 sm:pt-[5.5rem]">
+      <div className="w-full pt-24 sm:pt-[5.5rem]">
         {SLIDES.map((s, i) => (
           <HeroSlide key={s.id} item={s} priority={i === 0} />
         ))}
       </div>
 
-      <section className="w-full min-w-0 max-w-full border-t border-[#C9A84C]/20 bg-[#07111f] py-20 sm:py-24">
-        <div className="mx-auto flex w-full max-w-[800px] flex-col items-center px-4 text-center">
+      <section className="w-full bg-[#07111f] px-4 py-24 flex justify-center">
+        <div className="mx-auto w-full max-w-[800px] text-center">
         <h2
-          className="mx-auto mb-6 w-full text-center"
-          style={{
-            fontFamily: "var(--font-noto-serif-jp), serif",
-            color: "#FFFFFF",
-            fontSize: "clamp(1.8rem, 5vw, 3rem)",
-            fontWeight: 700,
-            lineHeight: 1.45,
-            textShadow: "0 2px 20px rgba(0,0,0,0.8)",
-          }}
+          className="mb-6 text-2xl text-white md:text-3xl"
+          style={{ fontFamily: "var(--font-noto-serif-jp), serif" }}
         >
           香りは、最後の差別化になる
         </h2>
+
         <p
-          className="mx-auto mb-10 w-full text-center"
-          style={{
-            fontFamily: "var(--font-noto-serif-jp), serif",
-            color: "rgba(255,255,255,0.9)",
-            fontSize: "clamp(0.85rem, 2.5vw, 1.1rem)",
-            fontWeight: 400,
-            lineHeight: 1.8,
-            textShadow: "0 1px 10px rgba(0,0,0,0.8)",
-          }}
+          className="text-sm leading-relaxed text-gray-300"
+          style={{ fontFamily: "var(--font-noto-serif-jp), serif" }}
         >
           写真のような「印象」は、香りで裏付けられる。
           <br />
@@ -254,32 +228,35 @@ export default function LpVisual() {
           <br />
           すべて、五感の土台の上に成り立つ。
         </p>
-        <p
-          className="mx-auto mb-0 w-full text-center"
-          style={{
-            background: "rgba(0,0,0,0.7)",
-            color: "#E8CC7A",
-            fontSize: "clamp(1.2rem, 3vw, 1.8rem)",
-            borderLeft: "4px solid #C9A84C",
-            padding: "2rem",
-            fontFamily: "var(--font-noto-serif-jp), serif",
-            lineHeight: 1.6,
-          }}
+
+        <div className="flex w-full flex-col items-center">
+        <div
+          className="mx-auto mt-8 w-full max-w-[640px] border-x-4 border-[#D4AF37] bg-black/40 px-6 py-6 text-center"
+          style={{ fontFamily: "var(--font-noto-serif-jp), serif" }}
         >
-          今なら【博多・天神エリア】限定
-          <br />
-          初期費用０円 ＋ 1ヶ月無料デモ実施中
-          <br />
-          まず香りを体感してください
-        </p>
-        <ul className="mx-auto mt-6 w-fit max-w-full list-none space-y-2 text-left text-sm text-[#B8A882] sm:text-base">
-          {BULLETS.map((t) => (
-            <li key={t} className="w-full min-w-0 border-b border-[#C9A84C]/10 py-1.5">
-              <span className="text-[#C9A84C]">·</span> {t}
-            </li>
-          ))}
-        </ul>
-        <div className="mx-auto mt-8 w-full max-w-[360px]">
+          <p className="text-lg text-[#D4AF37]">
+            今なら【<span className="gold-shimmer font-semibold">博多・天神周辺エリア</span>】限定
+          </p>
+          <p className="mt-2 text-white">初期費用０円 ＋ 1ヶ月無料デモ実施中</p>
+          <p className="mt-1 text-white">まず香りを体感してください</p>
+        </div>
+
+        <div
+          className="mx-auto mt-8 flex w-full max-w-[520px] flex-col items-center space-y-3 text-center text-[#F5E6C8]"
+          style={{ fontFamily: "var(--font-noto-serif-jp), serif" }}
+        >
+          <p>業界最安値クラスの月額料金</p>
+          <p>香りで売上アップ・滞在時間延長</p>
+          <p>スタッフのモチベーションアップ</p>
+          <p>求人成功率アップ</p>
+          <p>他店との差別化・ブランディング</p>
+          <p>新規獲得・リピート率アップ</p>
+          <p>香りは脳に深く記憶される</p>
+          <p>1ヶ月無料デモ設置可能</p>
+          <p>初期費用サービス中</p>
+        </div>
+
+        <div className="mx-auto mt-8 flex w-full justify-center">
           <LineCta
             size="lg"
             label="LINEで無料相談する"
@@ -287,17 +264,18 @@ export default function LpVisual() {
             hintAlign="center"
           />
         </div>
-        </div>
-        <p className="mt-6 w-full text-center">
+
+        <p className="mx-auto mt-6 w-full max-w-[520px] text-center">
           <Link
             href="/"
-            className="text-xs text-[#B8A882] underline decoration-[#C9A84C]/40 underline-offset-4 hover:text-[#E8CC7A]"
+            className="text-xs text-gray-400 underline decoration-gray-500/50 underline-offset-4 hover:text-[#E8CC7A]"
           >
             トップへ戻る
           </Link>
         </p>
+        </div>
+        </div>
       </section>
-      </div>
     </main>
   );
 }
