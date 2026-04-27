@@ -28,9 +28,15 @@
 
 html {
   scroll-behavior: smooth;
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
 }
 
 body {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
   background: linear-gradient(180deg, #030610 0%, #02040c 30%, #020308 70%, #02030a 100%);
   background-attachment: fixed;
   color: var(--text-primary);

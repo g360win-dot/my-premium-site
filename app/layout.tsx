@@ -48,7 +48,7 @@ export default function RootLayout({
         </Script>
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${notoSerifJP.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${notoSerifJP.variable} w-full min-w-0 max-w-full antialiased`}
       >
         {children}
       </body>

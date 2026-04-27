@@ -141,23 +141,27 @@ function HeroSlide({
   priority?: boolean;
 }) {
   return (
-    <section className="relative min-h-screen w-full" aria-label={item.alt}>
+    <section
+      className="relative isolate min-h-screen w-full min-w-0 max-w-full overflow-hidden"
+      aria-label={item.alt}
+    >
       <Image
         src={item.src}
         alt=""
         fill
         priority={priority}
-        className="object-cover"
+        className="z-0 h-full w-full max-w-full object-cover"
         sizes="100vw"
       />
       <div
-        className="absolute inset-0"
+        className="absolute inset-0 z-10"
         style={{
           background: "rgba(0,0,0,0.45)",
         }}
+        aria-hidden
       />
-      <div className="absolute inset-0 z-10 flex min-h-screen flex-col items-center justify-center px-6 text-center">
-        <div className="mx-auto flex max-w-4xl flex-col items-center gap-6 text-center">
+      <div className="absolute inset-0 z-20 flex min-h-screen w-full min-w-0 max-w-full flex-col items-center justify-center px-4 text-center sm:px-6">
+        <div className="mx-auto flex w-full min-w-0 max-w-4xl flex-col items-center gap-6 text-center">
           <h2
             style={{
               fontFamily: "var(--font-noto-serif-jp), serif",
@@ -191,12 +195,13 @@ function HeroSlide({
 
 export default function LpVisual() {
   return (
-    <div className="min-h-screen bg-[#02040a] text-[#F5EDD8]">
+    <main className="min-h-screen w-full overflow-x-hidden bg-[#07111f] text-white">
+      <div className="w-full min-w-0">
       <header
-        className="fixed left-0 right-0 top-0 z-50 border-b border-[#C9A84C]/20 bg-[#02040a]/85 backdrop-blur-md"
+        className="fixed left-0 right-0 top-0 z-50 w-full min-w-0 border-b border-[#C9A84C]/20 bg-[#07111f]/90 backdrop-blur-md"
         style={{ fontFamily: "Arial, sans-serif" }}
       >
-        <div className="mx-auto flex min-h-14 max-w-5xl items-center justify-between gap-3 px-4 py-2.5">
+        <div className="mx-auto flex w-full min-h-14 min-w-0 max-w-full items-center justify-between gap-2 px-4 py-2.5 sm:gap-3">
           <span
             className="gold-shimmer text-sm font-semibold tracking-[0.3em] sm:text-base"
             style={{ fontWeight: 600 }}
@@ -211,15 +216,16 @@ export default function LpVisual() {
         </div>
       </header>
 
-      <div className="pt-24 sm:pt-[5.5rem]">
+      <div className="w-full min-w-0 max-w-full pt-24 sm:pt-[5.5rem]">
         {SLIDES.map((s, i) => (
           <HeroSlide key={s.id} item={s} priority={i === 0} />
         ))}
       </div>
 
-      <section className="border-t border-[#C9A84C]/20 bg-[#02040a] px-4 py-20 text-center sm:py-24">
+      <section className="w-full min-w-0 max-w-full border-t border-[#C9A84C]/20 bg-[#07111f] py-20 sm:py-24">
+        <div className="mx-auto flex w-full max-w-[800px] flex-col items-center px-4 text-center">
         <h2
-          className="mb-6 max-w-4xl mx-auto"
+          className="mx-auto mb-6 w-full text-center"
           style={{
             fontFamily: "var(--font-noto-serif-jp), serif",
             color: "#FFFFFF",
@@ -232,7 +238,7 @@ export default function LpVisual() {
           香りは、最後の差別化になる
         </h2>
         <p
-          className="mx-auto mb-10 max-w-4xl text-center"
+          className="mx-auto mb-10 w-full text-center"
           style={{
             fontFamily: "var(--font-noto-serif-jp), serif",
             color: "rgba(255,255,255,0.9)",
@@ -249,7 +255,7 @@ export default function LpVisual() {
           すべて、五感の土台の上に成り立つ。
         </p>
         <p
-          className="mx-auto mb-10 max-w-3xl text-center"
+          className="mx-auto mb-0 w-full text-center"
           style={{
             background: "rgba(0,0,0,0.7)",
             color: "#E8CC7A",
@@ -266,20 +272,23 @@ export default function LpVisual() {
           <br />
           まず香りを体感してください
         </p>
-        <ul className="mx-auto mb-12 grid max-w-2xl list-none gap-2 text-left text-sm text-[#B8A882] sm:grid-cols-2 sm:text-base">
+        <ul className="mx-auto mt-6 w-fit max-w-full list-none space-y-2 text-left text-sm text-[#B8A882] sm:text-base">
           {BULLETS.map((t) => (
-            <li key={t} className="border-b border-[#C9A84C]/10 py-1.5 pl-1">
+            <li key={t} className="w-full min-w-0 border-b border-[#C9A84C]/10 py-1.5">
               <span className="text-[#C9A84C]">·</span> {t}
             </li>
           ))}
         </ul>
-        <LineCta
-          size="lg"
-          label="LINEで無料相談する"
-          hint="「『香りのホームページを見ました』と送信してください」"
-          hintAlign="center"
-        />
-        <p className="mt-6">
+        <div className="mx-auto mt-8 w-full max-w-[360px]">
+          <LineCta
+            size="lg"
+            label="LINEで無料相談する"
+            hint="「『香りのホームページを見ました』と送信してください」"
+            hintAlign="center"
+          />
+        </div>
+        </div>
+        <p className="mt-6 w-full text-center">
           <Link
             href="/"
             className="text-xs text-[#B8A882] underline decoration-[#C9A84C]/40 underline-offset-4 hover:text-[#E8CC7A]"
@@ -288,6 +297,7 @@ export default function LpVisual() {
           </Link>
         </p>
       </section>
-    </div>
+      </div>
+    </main>
   );
 }
